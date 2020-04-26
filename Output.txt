@@ -1,0 +1,189 @@
+curl -XGET 'http://localhost:9200/_cat/allocation?v'
+shards disk.indices disk.used disk.avail disk.total disk.percent host      ip        node
+   918      339.4gb  1016.4gb     14.7tb     15.7tb            6 127.0.0.1 127.0.0.1 MXMUEqX
+    37                                                                               UNASSIGNED
+
+
+
+curl -XGET localhost:9200/
+{
+  "name" : "MXMUEqX",
+  "cluster_name" : "ClusterX",
+  "cluster_uuid" : "6PWwq_cjQPGDxYShUQFVtw",
+  "version" : {
+    "number" : "6.3.2",
+    "build_flavor" : "oss",
+    "build_type" : "tar",
+    "build_hash" : "053779d",
+    "build_date" : "2018-07-20T05:20:23.451332Z",
+    "build_snapshot" : false,
+    "lucene_version" : "7.3.1",
+    "minimum_wire_compatibility_version" : "5.6.0",
+    "minimum_index_compatibility_version" : "5.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+
+curl -XGET localhost:9200/_cat/indices?v
+health status index                                      uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   rollups-app_1-2020.04.23                   sV5tBAqrQT2ueyIneVTh7w   6   0      86455            0    115.6mb        115.6mb
+green  open   events-2020.04.08                          siOtZ5D7Sayl2nqxCLEEOQ   6   0    4359074            0      1.9gb          1.9gb
+green  open   rollups-app_2-2020.04.10                   d3gAWPAmRuyjsfzfRHjc0A   6   0    5786430            0        2gb            2gb
+green  open   rollups-app_3-2020.04.16                   9ZdFlnLxSoOuYjEz3zGKUg   6   0      21594            0      4.9mb          4.9mb
+green  open   app_3-2020.04.25                           zOIJxqLoRxSDDYVd70QOlQ   6   0     734624            0     44.3mb         44.3mb
+green  open   events-2020.04.18                          J0oI0OYRS-yN34j3BoW0Aw   6   0     140151            0     70.5mb         70.5mb
+green  open   app_3-2020.04.12                           c4Q2Ik3YTDSYXbWkiXMBSw   6   0     736972            0     44.2mb         44.2mb
+green  open   app_1-2020.04.24                           5iW9ez6JSKq4Xoxf9uHe2Q   6   0   19619723            0      3.4gb          3.4gb
+green  open   app_3-2020.04.22                           hsRbgeEvSJqvtx_Fjebo2g   6   0     292323            0     17.4mb         17.4mb
+green  open   rollups-app_2-2020.03.31                   bVHK44vjQweiMmY7plCyMw   6   0    2713755            0    963.3mb        963.3mb
+green  open   app_3-2020.04.11                           Gt_pPJ3bTX6HPg06keqdug   6   0     687132            0     39.5mb         39.5mb
+green  open   rollups-app_1-2020.03.29                   HBI3lGqfTbmjGGnwRj6CCQ   6   0      17496            0     24.1mb         24.1mb
+green  open   rollups-app_1-2020.04.01                   ph9o1PR8SrWDdSdj9UwREA   6   0      68682            0     91.1mb         91.1mb
+green  open   app_3-2020.04.06                           RjYi-4JTS1m-qjR48pR9TA   6   0     741458            0     44.5mb         44.5mb
+green  open   app_3-2020.04.13                           nzASSN3_TQ2GsLOwuK4xLA   6   0     740193            0     44.3mb         44.3mb
+green  open   app_3-2020.04.04                           OPmx8G1TRVOWG6dJ0zx6lg   6   0      89308            0      5.3mb          5.3mb
+green  open   app_3-2020.04.14                           Z6Sb1dg2R8-FTz0kBzwLig   6   0     741881            0     44.5mb         44.5mb
+green  open   rollups-app_3-2020.04.22                   k_F6ZmWRQQqVnrRE-lJBtQ   6   0      12933            0        3mb            3mb
+green  open   events-2020.04.09                          UN32xPZdSSu0TZyN9hJH3Q   6   0    2174134            0     1007mb         1007mb
+green  open   app_2-2020.04.08                           Z84K_AZkSGOm_wfEqzlN9g   6   0  183760488            0     15.2gb         15.2gb
+green  open   events-2020.04.26                          g_pDkcr9SrqVioZLnFsW8Q   6   0    1471481            0    718.7mb        718.7mb
+green  open   rollups-app_3-2020.03.22                   C6rn3_XfRomioZTx7MSedA   6   0       6300            0      1.5mb          1.5mb
+green  open   rollups-app_1-2020.04.09                   Y1lZ9J23QUeoVGwVcyeu4Q   6   0     188892            0    250.6mb        250.6mb
+green  open   app_3-2020.04.19                           iMvr2B0ZSb2jkWtshkfWdA   6   0      54530            0      3.3mb          3.3mb
+green  open   rollups-app_3-2020.03.30                   eTtDYXcES-aXuawN5kSPTQ   6   0      20066            0      4.6mb          4.6mb
+green  open   app_3-2020.04.17                           njYidIboSVmfTRr9XlWHDA   6   0     736912            0     44.2mb         44.2mb
+green  open   app_2-2020.04.11                           oG_r-bkdSOiRhHoR2H2-gw   6   0  922800546            0     73.5gb         73.5gb
+green  open   app_3-2020.04.07                           9HvxdqMVRIW699SYRhn8bg   6   0      11002            0    729.4kb        729.4kb
+green  open   rollups-app_3-2020.03.27                   iRfYSa8nSNOAATpKoL-iCQ   6   0       6344            0      1.9mb          1.9mb
+green  open   datetime_helper_index                      BfqaNXzARoC2REkxi61Tgg   1   0          0            0       261b           261b
+green  open   events-2020.04.07                          -ZDR1_FnQNePX1y0QvQkdQ   6   0       3141            0      2.4mb          2.4mb
+green  open   events-2020.04.01                          LP1dA7HWQU2Bc9y1wbmlTw   6   0    2213963            0        1gb            1gb
+green  open   rollups-app_3-2020.04.04                   2qRHoZDmQcW72S26BxYxiQ   6   0      20059            0      4.2mb          4.2mb
+green  open   app_2-2020.04.02                           dPEZBiLsRsyRUpaLAqG34g   6   0  514562611            0     41.1gb         41.1gb
+green  open   app_2-2020.04.23                           1xF_RFvfQmiOKHOZybnRNw   6   0  163335475            0     13.6gb         13.6gb
+green  open   rollups-app_2-2020.04.22                   etOUMGkNQTqMht-FNvfWhg   6   0    1173712            0    418.2mb        418.2mb
+green  open   app_2-2020.04.09                           yps_wY4UQHyMWziCB37bgg   6   0  397486697            0     32.4gb         32.4gb
+green  open   rollups-app_1-2020.04.02                   -pc30ljSRLCVr6ejyI9w9A   6   0      14003            0     18.9mb         18.9mb
+green  open   rollups-app_2-2020.03.27                   rdHEhJB4Rlyvgl9YKpNZ2g   6   0     698982            0    260.2mb        260.2mb
+green  open   events-2020.04.21                          -RdP9a1IRiaHrSCfKS34OQ   6   0    2098262            0    987.7mb        987.7mb
+green  open   events-2020.04.19                          C-DA7UsgQmK5zLJGPD9xMQ   6   0      12343            0        8mb            8mb
+green  open   app_1-2020.04.07                           DGnvjmRZQMa8qswHCFQrAA   6   0     151703            0     21.5mb         21.5mb
+green  open   rollups-app_3-2020.04.08                   L8X1POX5Q3yNMvE8sWHHOQ   6   0      19838            0      4.5mb          4.5mb
+green  open   rollups-app_3-2020.03.31                   2etmsS6HQmmbTqO71YRFAQ   6   0       7240            0      1.8mb          1.8mb
+green  open   rollups-app_3-2020.03.26                   -nB4IVXQSq6hPHgzXz-fDg   6   0      18196            0      4.1mb          4.1mb
+green  open   rollups-app_1-2020.03.27                   SdBMBB66SQGwBVa8F-sZDg   6   0     113247            0    152.6mb        152.6mb
+red    open   rollups-app_3-2020.03.16                   VzvBcdPcRVS3c9zaxtSjdw   6   0
+green  open   events-2020.04.20                          PPfVaV6ARhqSNr7P2KTHJg   6   0    4008525            0      1.7gb          1.7gb
+green  open   rollups-app_3-2020.04.14                   nLkU-QLfRhaYBmaDK2zyQg   6   0      21695            0      4.8mb          4.8mb
+green  open   events-2020.04.11                          95apkG_mQdiHShBqnG_1_Q   6   0    1711148            0      793mb          793mb
+green  open   rollups-app_2-2020.03.25                   s47UJ1LqQ4OuHMKgxPVC_w   6   0     448338            0    166.2mb        166.2mb
+green  open   rollups-app_2-2020.03.20                   UX6JJQasRCGbyIIq52qnlw   6   0     255051            0     88.8mb         88.8mb
+green  open   app_2-2020.04.10                           PPTEt1atTG6MlG3Pl7jqpg   6   0  407957499            0     33.3gb         33.3gb
+green  open   app_3-2020.04.26                           HgolzVBSTXidwW6P2JNRIQ   6   0     498419            0       30mb           30mb
+green  open   app_3-2020.04.03                           PZyTtSJESHSPKG1IogkRAg   6   0      29164            0      1.7mb          1.7mb
+green  open   rollups-app_2-2020.03.23                   kAq6_ykPTsSmzMToYrSINw   6   0     124037            0     42.6mb         42.6mb
+green  open   rollups-app_3-2020.03.23                   j5-Wm40LThSabI0SyzpF-A   6   0      17974            0      4.1mb          4.1mb
+green  open   rollups-app_3-2020.03.29                   FpGstBbxSBmDG0-oq4yVtg   6   0      16033            0      3.4mb          3.4mb
+green  open   rollups-app_2-2020.03.18                   oXzUll47Tf6g0Mqd6zU6Eg   6   0     367593            0      143mb          143mb
+green  open   rollups-app_2-2020.04.02                   2HRkLMI0T4mxRG68yOL7pg   6   0     305581            0    106.4mb        106.4mb
+green  open   rollups-app_3-2020.04.03                   fvxgqt9kTQ-tuLczT0HYDQ   6   0       5435            0      1.1mb          1.1mb
+green  open   events-2020.04.06                          bIkReTqnS4auC4XwZSf3BQ   6   0     368961            0    184.3mb        184.3mb
+green  open   events-2020.04.17                          -AAeFc1sSBGOS96SVWkN7g   6   0    2162719            0        1gb            1gb
+green  open   app_3-2020.04.10                           UCG3A7FfTNmEWr3B7QBBvA   6   0     696363            0     39.2mb         39.2mb
+green  open   rollups-app_3-2020.04.20                   lZc2rr0LSSWQ8L82IjzFRw   6   0       7980            0      1.8mb          1.8mb
+green  open   rollups-app_3-2020.04.26                   982Jh7CNS2WUOes4Vh7z7Q   6   0      14050            0      3.2mb          3.2mb
+green  open   app_3-2020.04.01                           6nAAtTiYTGmVbvIQqeb9Zg   6   0     626113            0       36mb           36mb
+red    open   rollups-app_1-2020.03.16                   s4yCdyeAS1iJ-WVPCRiPlg   6   0       3026            0      4.4mb          4.4mb
+green  open   app_3-2020.04.16                           eE44VJZlR1a59pcgQofuWQ   6   0     738135            0     44.3mb         44.3mb
+green  open   rollups-app_2-2020.03.24                   QRKcSB-QSxyj4VlnnAXmaQ   6   0        267            0      155kb          155kb
+green  open   app_3-2020.04.09                           2SNqxH4sSLGtY2x0OzQrrw   6   0     691343            0     39.4mb         39.4mb
+green  open   rollups-app_2-2020.03.22                   aHm-OF9ARWmXVOOux3ZBvA   6   0     259019            0     94.3mb         94.3mb
+green  open   rollups-app_1-2020.03.23                   IcGx5AyhTqSoNM6Xa9JTnQ   6   0      85136            0    119.2mb        119.2mb
+green  open   app_3-2020.04.15                           1jQ5XIO9SwavZtN9TnYV9g   6   0     742163            0     44.6mb         44.6mb
+green  open   rollups-app_3-2020.04.09                   jNH3Q2SIT0KREyfxJeLy7A   6   0       9948            0      2.6mb          2.6mb
+green  open   app_1-2020.04.09                           owTxr8OaRH-eDHHjdqwCUQ   6   0   21629028            0      3.2gb          3.2gb
+green  open   events-2020.04.22                          nh2UY0NDSgGQskw40fAV_g   6   0    3677367            0      1.6gb          1.6gb
+green  open   rollups-app_3-2020.03.21                   lxkj1dWWRS-16SG4CQFVLQ   6   0       1798            0    702.1kb        702.1kb
+green  open   events-2020.04.15                          PqiU4RxSSAG-9C8TKBWzlw   6   0    2192450            0        1gb            1gb
+green  open   app_2-2020.04.01                           flf9ko6qQvW4PCuh2SsDtA   6   0  352333069            0       29gb           29gb
+green  open   events-2020.04.10                          7TZsM2xjQ3-e3NzJ9u3lug   6   0    2121698            0    978.7mb        978.7mb
+green  open   rollups-app_2-2020.04.11                   jrttsuA9RZKFU8a5LLbXHw   6   0    4491622            0      1.5gb          1.5gb
+green  open   rollups-app_2-2020.03.21                   gqUmMRWzQNOTsjUepyJvIA   6   0     263506            0     94.7mb         94.7mb
+green  open   app_1-2020.04.01                           -J1PByfoTnCTS8PiRco_pg   6   0   19124845            0      2.8gb          2.8gb
+green  open   rollups-app_1-2020.04.11                   ONDcgr88Tu6vzSOoHftebw   6   0     223876            0    295.3mb        295.3mb
+green  open   rollups-app_3-2020.04.15                   TJ7ZgnZ7Tl-LJSRCVAnqYQ   6   0      21719            0      4.9mb          4.9mb
+green  open   events-2020.04.16                          oOQfgVd4RyOi1rfkhAbytQ   6   0    2166871            0        1gb            1gb
+green  open   rollups-app_1-2020.03.22                   0NCXWykeS2WGQOGgK9-mxQ   6   0      60400            0     84.2mb         84.2mb
+green  open   rollups-app_1-2020.03.30                   6OXAhnwzQcaqU1XZ_Qn0Gw   6   0      52213            0     69.7mb         69.7mb
+green  open   app_1-2020.04.11                           t_uw4bXSQMKyGjW3SaML1Q   6   0   50502904            0      7.2gb          7.2gb
+green  open   rollups-app_2-2020.04.24                   WgBG0oRNSue1jzpPCQDw3A   6   0     660171            0    240.1mb        240.1mb
+green  open   events-2020.04.13                          ParKVZBpQiqjb3ELWd4E_Q   6   0    2121867            0        1gb            1gb
+green  open   rollups-app_1-2020.03.25                   zpeUPSX-Rbeiiwnk_oO-8w   6   0      65051            0     87.8mb         87.8mb
+green  open   rollups-app_2-2020.03.26                   4-bk5yaqSZCkk4M1X_WGYg   6   0    2062285            0    763.7mb        763.7mb
+red    open   rollups-app_1-2020.03.17                   hHY0zfp7TWCpKGeAinBRgw   6   0      15781            0     22.3mb         22.3mb
+red    open   rollups-app_2-2020.03.17                   mYVbSpFlQPWRz6-11yPnhg   6   0
+green  open   rollups-app_3-2020.04.17                   Vv4jzSaSSf-g3QE7GQAQ4A   6   0      21570            0      4.8mb          4.8mb
+green  open   rollups-app_2-2020.04.01                   qwFlYR2ASi6XldoX7b0VJw   6   0    1364222            0    471.3mb        471.3mb
+red    open   events-2020.04.24                          RJXJ15kISoiKWwvcjLwk1A   6   0     543178            0      255mb          255mb
+green  open   app_1-2020.04.10                           FTQg6TAHRIidpYrbxafCLg   6   0   22205127            0      3.3gb          3.3gb
+green  open   app_2-2020.04.07                           -Jso-rupRCyqxYc8SfGQew   6   0   31269060          350      2.2gb          2.2gb
+green  open   rollups-app_3-2020.03.24                   5fnAGCY2QoehSJVyvUlVgw   6   0      18926            0      4.3mb          4.3mb
+green  open   app_3-2020.04.23                           2QT5hm9hT6yAgT83Eum95w   6   0     663662            0     39.3mb         39.3mb
+green  open   app_3-2020.04.20                           yhoHpJvXQv2qnql-T2OlEw   6   0      95421            0      5.5mb          5.5mb
+red    open   app_3-2020.04.24                           qTKwcQ9lQVququL6Sytyug   6   0     212293            0     12.3mb         12.3mb
+green  open   app_1-2020.04.22                           CpfEM4tFQ36LaxQWxP1WDQ   6   0    6558135            0      985mb          985mb
+green  open   rollups-app_1-2020.04.10                   QtDu2_b-RjKiWq09yz97pQ   6   0     291964            0    386.1mb        386.1mb
+green  open   rollups-app_3-2020.04.11                   JiYLQ88KT_2Dn-P1kox81g   6   0      16280            0      3.9mb          3.9mb
+green  open   rollups-app_3-2020.04.10                   yXBIHQV4TCucaqhNiCQkbw   6   0      15366            0      3.3mb          3.3mb
+red    open   app_2-2020.04.24                           G_krlzDhS76veJ1RG0YrRg   6   0  287843638            0     23.4gb         23.4gb
+green  open   events-2020.04.05                          m7YF14UGROuSvpowLWgSnQ   6   0    1980755            0    883.7mb        883.7mb
+red    open   rollups-app_2-2020.03.16                   5B4ClMleR6CUcIlkYCompg   6   0
+green  open   rollups-app_3-2020.03.25                   EUW91bH7RDSPZ8sG3v2crg   6   0       3644            0      1.2mb          1.2mb
+green  open   rollups-app_1-2020.03.26                   8Z7M3tFIQFek4TPfyy4Z1w   6   0     331921            0    445.8mb        445.8mb
+green  open   app_1-2020.04.02                           kfwt6lpATJih9G9hMjPhPg   6   0   19812858            3      2.9gb          2.9gb
+green  open   rollups-app_1-2020.03.24                   AVPZvYu0Tl-FJkYCn9h2Mg   6   0      13042            0     18.8mb         18.8mb
+green  open   rollups-app_3-2020.04.24                   dbdaFv_FTQCCyhc6xuJORA   6   0      13432            0      2.9mb          2.9mb
+green  open   rollups-app_3-2020.04.25                   6FkIgV1TQwq0UrXZIYTZdw   6   0      21584            0      4.9mb          4.9mb
+green  open   app_3-2020.04.18                           pk2yGG7pSZ6AcA4pIbprOw   6   0      57807            0      3.4mb          3.4mb
+green  open   rollups-app_1-2020.03.31                   lLC5z_jSRzOVQBpecQbNTQ   6   0     137658            0    183.1mb        183.1mb
+green  open   events-2020.04.23                          4_RvPN8SRTKEueQ5rKv78g   6   0    2729751            0      1.2gb          1.2gb
+green  open   rollups-app_2-2020.03.19                   OoCfRAXjTg6szru6LzoWnw   6   0     395079            0    136.4mb        136.4mb
+green  open   rollups-app_1-2020.04.07                   U5ir4Z0iRjS70AUjzhIOCA   6   0       3649            0      3.4mb          3.4mb
+green  open   rollups-app_3-2020.04.02                   ldNYCeSXRueTmnkFSKtrjA   6   0       1538            0    537.5kb        537.5kb
+green  open   rollups-app_3-2020.04.05                   L4xwIAOmSUyP4tclJv7Lag   6   0      18076            0      4.1mb          4.1mb
+green  open   rollups-app_2-2020.04.23                   Yy4DlKsPQz-3Aj-aWXaSOQ   6   0    1811530            0    646.4mb        646.4mb
+green  open   rollups-app_1-2020.04.22                   mnoiKFguSxeZhVR3g-Nbnw   6   0      56172           10     75.5mb         75.5mb
+green  open   events-2020.04.14                          zQCJPYXWQQWvpGSo_3Qt9A   6   0    2140255            0        1gb            1gb
+green  open   rollups-app_1-2020.03.21                   on8B9X2VS8mTO5oYpHHlsg   6   0      22384            0       31mb           31mb
+green  open   app_3-2020.04.05                           D5-8XwSkT-6kj5L2eqdzkQ   6   0     740881            0     44.4mb         44.4mb
+green  open   rollups-app_2-2020.04.07                   -C-ggT_YRu6c33QyWqvmWA   6   0      64804            0     15.4mb         15.4mb
+green  open   events-2020.04.25                          ZkeabmOmQZanKRpHXeQjNQ   6   0    3523641            0      1.6gb          1.6gb
+red    open   rollups-app_3-2020.03.17                   JXEDfBK4Spe5KX2W5v22SQ   6   0
+green  open   rollups-app_3-2020.04.12                   SfZXQvdvS4i4kUSDoSvfpQ   6   0      21597            0      4.8mb          4.8mb
+green  open   rollups-app_3-2020.04.06                   s4PxJk19Q2mr04w9fXw6PQ   6   0      21528            0      4.8mb          4.8mb
+green  open   events-2020.04.04                          6PhBu6eqSW-qmns8tupNLg   6   0    2344775            0        1gb            1gb
+green  open   rollups-app_1-2020.04.24                   EKeBUUl6S86NqfdxieG3pA   6   0      33788            0     45.2mb         45.2mb
+green  open   rollups-app_1-2020.03.18                   Hd9wspnrRkalxItheNwl4A   6   0      26127            0     36.4mb         36.4mb
+green  open   app_2-2020.04.22                           VPNR70rGToiYFob2pzUuhQ   6   0  129758285            0     10.5gb         10.5gb
+green  open   rollups-app_2-2020.04.08                   I9vfRgqjQTib0jixHXvwpw   6   0    3161612            0        1gb            1gb
+green  open   app_3-2020.04.08                           KoJ9Z-y6Tt6DhEZEEjflzQ   6   0     697247            0     41.6mb         41.6mb
+green  open   rollups-app_2-2020.03.29                   WRr-JTQSSkOdUOapQ0_xaA   6   0     238847           12     82.1mb         82.1mb
+green  open   rollups-app_3-2020.04.19                   4nnygWTeQhCB5bIzYCK_Ww   6   0      13383            0      2.8mb          2.8mb
+green  open   rollups-app_3-2020.04.23                   Wpk0vvxZQl26WdLDa9G6Kg   6   0      15324            0      3.5mb          3.5mb
+green  open   app_3-2020.04.21                           0rbG5Yk6RvGK6kuUatidRQ   6   0     733511            0       44mb           44mb
+green  open   rollups-app_3-2020.04.01                   VMIO_V4uTK2qMADxnrD4cA   6   0       3602            0        1mb            1mb
+green  open   app_3-2020.04.02                           Qx3BpKQZSGWTSWydi1vneg   6   0     554354            0     32.2mb         32.2mb
+green  open   rollups-app_3-2020.03.18                   tQmMNn0CR56hFQR6X9KhBw   6   0       2384            0   1022.8kb       1022.8kb
+green  open   rollups-app_3-2020.04.07                   fcIwfnVkTjWDHHjcc_9GmQ   6   0       1623            0    502.4kb        502.4kb
+green  open   rollups-app_1-2020.04.08                   Dc3j3xowTm2za6olnNB7Xw   6   0     154461            0    205.1mb        205.1mb
+green  open   rollups-app_2-2020.04.09                   sicpVe0aRpKGBMT7A50bwQ   6   0    3864762            0      1.3gb          1.3gb
+green  open   rollups-app_3-2020.04.18                   QYpGUgoETFuXRXICzL1Wrg   6   0      10870            0      2.2mb          2.2mb
+green  open   events-2020.04.02                          GBsn_NEvSHOpSRAZDYJeZw   6   0    2043477            1    958.3mb        958.3mb
+green  open   events-2020.04.03                          4tEe4auASLuodru2ENMhDg   6   0      55565            0     30.9mb         30.9mb
+green  open   rollups-app_3-2020.04.13                   EtVK3EDGSlmF45p9ykiAGQ   6   0      21664            0      4.9mb          4.9mb
+green  open   rollups-app_2-2020.03.30                   wTesRWRiTS-B257htwnySw   6   0    1033515            0    363.3mb        363.3mb
+green  open   app_1-2020.04.23                           hnW1UR8DTdqbhpYlRoeudw   6   0    9044602            0      1.3gb          1.3gb
+green  open   rollups-app_3-2020.04.21                   7Hkp_FkxS1-3A-QiTqWh6A   6   0      10747            0      2.4mb          2.4mb
+green  open   app_1-2020.04.08                           YT6ASFe6SCChe7d8rOKl9A   6   0    9982438            0      1.5gb          1.5gb
+green  open   events-2020.04.12                          ur0vEh8MSGmm7egq6i6Ndw   6   0    2482186            0      1.1gb          1.1gb
